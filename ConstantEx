@@ -1,0 +1,26 @@
+class ConstantEx
+    {
+        public const int i = 10;
+        public int j = 20;
+        public static int k = 30;
+        //public static const m= 40; // const cannot be defined static
+
+        public void con()
+        {
+            //Error, cannot modified i as it is constant
+            //i = 20;
+            j = 30;
+            const int n = i * 5;
+            Console.WriteLine("i : "+i);
+            Console.WriteLine("j : "+j);
+            Console.WriteLine("i+j" +(i+j));
+
+            char l = 'k';
+            float b = 19.0f;
+            int c;
+            c = (l/Convert.ToInt32(b));
+            Console.WriteLine("C "+c);
+
+            c = Convert.ToInt32(l / b);
+            Console.WriteLine("C " + c);
+        }
